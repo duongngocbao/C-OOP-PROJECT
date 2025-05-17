@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1150</width>
+    <height>651</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color:#D8ECD4;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>621</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>-1</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+      <strikeout>false</strikeout>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="cursor" stdset="0">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* QTableWidget (các bảng) */
+QTableWidget {
+    background-color: white;
+    gridline-color: #dcdcdc;
+    font-size: 14px;
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+}
+
+/* Tiêu đề của QTableWidget */
+QHeaderView::section {
+    background-color: #72B449;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+}
+/* Hiệu ứng cho nút &quot;Buy&quot; */
+QPushButton {
+    background-color: #1d6f5a;
+    color:#ffce54;
+    border: 1px solid #c2c2c2;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+QPushButton:hover {
+    background-color: #F0FFF3; /* Màu nền khi đưa chuột vào */
+    color: #ffce54; /* Màu chữ khi đưa chuột vào */
+    border: 1px solid #2980b9;
+}
+
+QPushButton:pressed {
+    background-color: #2980b9; /* Màu nền khi nhấn nút */
+    color: #ffce54;
+}
+
+</string>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::SelectionMode::NoSelection</enum>
+    </property>
+    <column>
+     <property name="text">
+      <string>Image</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Name</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Price</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Quantity</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Sale</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Purchase</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>140</y>
+      <width>141</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* QPushButton (các nút như Sale Product, Sort by Decrease, Get Bill) */
+QPushButton {
+    background-color: #1d6f5a;
+    color: #ffce54;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #F0FFF3;
+}
+
+QPushButton:pressed {
+    background-color: #1c5986;
+}</string>
+    </property>
+    <property name="text">
+     <string>Sort by Increase</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>110</y>
+      <width>141</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* QPushButton (các nút như Sale Product, Sort by Decrease, Get Bill) */
+QPushButton {
+    background-color: #1d6f5a;
+    color: #ffce54;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #F0FFF3;
+}
+
+QPushButton:pressed {
+    background-color: #1c5986;
+}</string>
+    </property>
+    <property name="text">
+     <string>Sort by Decrease</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>140</y>
+      <width>141</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* QPushButton (các nút như Sale Product, Sort by Decrease, Get Bill) */
+QPushButton {
+    background-color: #1d6f5a;
+    color: #ffce54;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #F0FFF3;
+}
+
+QPushButton:pressed {
+    background-color: #1c5986;
+}</string>
+    </property>
+    <property name="text">
+     <string>Normal View</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>110</y>
+      <width>141</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* QPushButton (các nút như Sale Product, Sort by Decrease, Get Bill) */
+QPushButton {
+    background-color: #1d6f5a;
+    color: #ffce54;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #F0FFF3;
+}
+
+QPushButton:pressed {
+    background-color: #1c5986;
+}</string>
+    </property>
+    <property name="text">
+     <string>Sale Product</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>140</y>
+      <width>141</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* QPushButton (các nút như Sale Product, Sort by Decrease, Get Bill) */
+QPushButton {
+    background-color: #1d6f5a;
+    color: #ffce54;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #F0FFF3;
+}
+
+QPushButton:pressed {
+    background-color: #1c5986;
+}</string>
+    </property>
+    <property name="text">
+     <string>Out Of Stock</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>20</y>
+      <width>591</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>-1</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: #1d6f5a; /* Màu xanh lá đậm */
+    color: #ffce54; /* Màu chữ vàng */
+    font-size: 38px; /* Kích thước chữ lớn */
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}</string>
+    </property>
+    <property name="text">
+     <string>Bach Hoa IoT</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>170</y>
+      <width>501</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* QTableWidget (các bảng) */
+QTableWidget {
+    background-color: white;
+    gridline-color: #dcdcdc;
+    font-size: 14px;
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+}
+
+/* Tiêu đề của QTableWidget */
+QHeaderView::section {
+    background-color: #72B449;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+}
+/* Hiệu ứng cho nút &quot;Buy&quot; */
+QPushButton {
+    background-color: #e74c3c;
+    color:white;
+    border: 1px solid #c2c2c2;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+QPushButton:hover {
+    background-color: #c0392b; /* Màu nền khi đưa chuột vào */
+    border: 1px solid #2980b9;
+}
+
+QPushButton:pressed {
+    background-color:  #a93226; /* Màu nền khi nhấn nút */
+    color: #ffce54;
+}
+
+</string>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::SelectionMode::NoSelection</enum>
+    </property>
+    <property name="selectionBehavior">
+     <enum>QAbstractItemView::SelectionBehavior::SelectItems</enum>
+    </property>
+    <column>
+     <property name="text">
+      <string>Image</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Name</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Price</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Quantity</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Remove </string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>559</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    font-size: 16px; /* Kích thước chữ */
+    font-weight: bold; /* Chữ đậm */
+    color: #333333; /* Màu chữ */
+    background-color: #f5f5f5; /* Màu nền nhạt */
+    padding: 5px; /* Khoảng cách trong */
+    border: 1px solid #dcdcdc; /* Đường viền nhẹ */
+    border-radius: 5px; /* Bo góc */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Total =</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>560</y>
+      <width>93</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* QPushButton (các nút như Sale Product, Sort by Decrease, Get Bill) */
+QPushButton {
+    background-color: #1d6f5a;
+    color: #ffce54;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #F0FFF3;
+}
+
+QPushButton:pressed {
+    background-color: #1c5986;
+}</string>
+    </property>
+    <property name="text">
+     <string>Get Bill</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>20</y>
+      <width>501</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>-1</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: #1d6f5a; /* Màu xanh lá đậm */
+    color: #ffce54; /* Màu chữ vàng */
+    font-size: 38px; /* Kích thước chữ lớn */
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}</string>
+    </property>
+    <property name="text">
+     <string>Purchase Item</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1150</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
